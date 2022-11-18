@@ -1,0 +1,28 @@
+
+<div class='card'>
+  <div class='card-img'>
+    <button class='label'>NEW</button>
+    <button class='save'>
+      <span class="material-symbols-outlined">
+        bookmark
+      </span>
+    </button>
+  </div>
+
+  <div class='card-desc'>
+    <span class='card-desc-first'>
+      <strong>{{projet.title}}</strong>
+      <small>by {{projet.auteur}}</small>
+      <p class='time'>{{projet.timeSpent.hours}}H{{projet.timeSpent.minutes| number: '2.0-0'}}</p>
+    </span>
+
+    <hr>
+
+    <span class='card-desc-last'>
+      <p>{{projet.deadLine | date: 'Dû pour le dd MMMM YYYY' :'fr-FR'}}</p>
+      
+      <!-- TODO => Changer dynamiquement la couleur avec l'évolution du % -->
+      <p>{{0.94| percent: '1.0-0'}}</p> 
+    </span>
+  </div>
+</div>
