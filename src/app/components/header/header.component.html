@@ -1,14 +1,14 @@
 <header>
     <nav class="mega-nav">
-        <div class="logo">
+        <div class="logo" (click)="goToHome()">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRGnU9b7HoBOV6QGAXyrgMpvCBLsU_NskeQ&usqp=CAU">
         </div>
         <div class="line"></div>
         <div class="right-log">
           <ul>
-            <li><a> HOME</a></li>
-            <li><a> PROJECTS</a></li>
-            <li><a> HISTORICS</a></li>
+            <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a > HOME</a></li>
+            <li routerLink="projects" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a> PROJECTS</a></li>
+            <li routerLink="historics" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a> HISTORICS</a></li>
           </ul>
         </div>
       </nav>

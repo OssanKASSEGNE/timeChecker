@@ -10,6 +10,7 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import * as fr from '@angular/common/locales/fr'
 import { registerLocaleData } from '@angular/common';
 import { LandingComponent } from './components/landing/landing.component';
+import { SingleProjectComponent } from './components/single-project/single-project.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LandingComponent } from './components/landing/landing.component';
     HeaderComponent,
     ProjectComponent,
     ProjectListComponent,
-    LandingComponent
+    LandingComponent,
+    SingleProjectComponent
   ],
   imports: [
     BrowserModule,

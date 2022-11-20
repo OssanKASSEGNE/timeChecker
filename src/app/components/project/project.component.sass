@@ -1,4 +1,11 @@
 
+// @keyframes hoverCard 
+//   from 
+//     box-shadow:  rgba(149, 157, 165, 0.2) 0px 8px 24px
+//   to 
+//     box-shadow:  black 10px 8px 24px
+
+    
 .card 
     margin: 10px
     width: 20rem
@@ -8,6 +15,13 @@
     border-radius: 0.5rem
     box-shadow:  rgba(149, 157, 165, 0.2) 0px 8px 24px
     background-color: rgba(8, 54, 129, 0.3)
+    cursor: pointer
+    transition: box-shadow linear 0.5s
+    &:hover
+        box-shadow:  black 10px 8px 24px
+        // animation-name: hoverCard
+        // animation-duration: 1s
+        
     &-img
         border-radius: 0.5rem 0.5rem 0 0
         display: flex
@@ -15,7 +29,7 @@
         align-itemns: center
         height: 10rem
         width: 100%
-        background: url("https://silicon.createx.studio/assets/img/portfolio/courses/01.jpg") center center
+        //background: url("https://silicon.createx.studio/assets/img/portfolio/courses/01.jpg") center center
         background-size: cover
         button 
             height: fit-content
@@ -62,4 +76,24 @@ hr
 .material-symbols-outlined 
     height: 1rem
 
+.controls
+    display: flex
+    flex-direction: row
+    max-width: 100px
 
+    .edit,.delete
+        padding: 2px
+        border-radius: 3px
+        border: solid 1px
+        margin: 2px
+        cursor: pointer
+        border: none
+        &:hover
+            box-shadow: 1px 2px 5px black
+    img
+        width: 50%
+
+.edit
+    background: #126aaecc
+.delete
+    background: #ce1e1ecc

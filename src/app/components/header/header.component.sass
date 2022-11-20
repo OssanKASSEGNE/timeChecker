@@ -1,6 +1,7 @@
 
 .logo 
     width: 10%
+    cursor: pointer
     img
         margin-left: 5%
         border-radius: 50%
@@ -32,7 +33,14 @@ nav
             li 
                 list-style: none
                 margin: 4%
+                cursor: pointer
+                transition: border-bottom linear 0.5s
+                transition: margin-bottom linear 0.5s
+                
                 &:hover
                     border-bottom: 5px solid 
                     margin-bottom: -18px
 
+.active
+    border-bottom: 5px solid 
+    

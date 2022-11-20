@@ -1,0 +1,5 @@
+<h1>
+    <div *ngIf="project ;else nothing">{{project.title | titlecase }}</div>
+    <ng-template #nothing > The project doesn't exist</ng-template>
+</h1>
+

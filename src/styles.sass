@@ -1,13 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300400500600700800&display=swap")
+@import url(https://fonts.googleapis.com/css?family=Poiret+One)
+
+@mixin button-bg($bg) 
+  background: $bg
+  transition: box-shadow linear 0.7s
+  &:hover 
+    background:darken($bg,8%)
+    transition: all 0.3s ease
+  &:active 
+    background:darken($bg,25%)
+
+@mixin animate($animation,$duration,$method,$times)
+    animation: $animation $duration $method $times
+ 
 
 $font-stack1 : Outfit, Helvetica, sans-serif
+$font-stack2: 'Poiret One', cursive
 $grey1: rgba(149, 157, 165, 0.2)
+$white: white
 
 *
     font-family: $font-stack1
+
     
 html
-    background-image: url(./assets/bgSite.jpg) 
+    background-color: $white
     background-repeat: no-repeat 
     background-size: cover
     height: 100hv
@@ -17,7 +34,55 @@ html
 body
     margin: 5px
 
+h1
+  font-family: $font-stack2
+  font-size:3.5em
+
+h2
+    font-family: $font-stack2
+    font-size:2.5em
+
 #main
     width: 90%
     margin: 20px auto
+
+
+
+
+.btn 
+    color:white
+    text-decoration:none
+    padding:5px 10px
+    border-radius:3px
+    font-family: 'Poiret One', cursive
+    font-size:2em
+    border: none
+    cursor: pointer
+    &:hover
+        box-shadow: 1px 2px 5px black
+
+
+.btn-green 
+   @include button-bg(#2ecc71)
+
+
+.btn-blue 
+   @include button-bg(#3498db)
+
+
+.btn-yellow
+   @include button-bg(#f1c40f)
+
+
+.btn-red 
+   @include button-bg(#e74c3c)
+
+
+/*Other Stylez*/
+.wrap 
+  margin:0 auto
+  width:800px
+  text-align:center
+
+
 

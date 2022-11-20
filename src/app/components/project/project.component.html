@@ -1,6 +1,6 @@
 
-<div class='card'>
-  <div class='card-img'>
+<div class='card' (click)="goToProjectDetails()">
+  <div class='card-img'[ngStyle]="{'background': url}">
     <button class='label'>NEW</button>
     <button class='save'>
       <span class="material-symbols-outlined">
@@ -23,6 +23,13 @@
       
       <!-- TODO => Changer dynamiquement la couleur avec l'évolution du % -->
       <p>{{0.94| percent: '1.0-0'}}</p> 
+      
     </span>
+    <div class="controls">
+    
+      <button class="delete"><img src="/assets/bin.png" alt="edit image"></button>
+      <button class="edit"><img src="/assets/edit.png" alt="edit image"></button>
+      
+    </div>
   </div>
 </div>
